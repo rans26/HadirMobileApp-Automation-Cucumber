@@ -59,3 +59,15 @@ Feature: Login functionality
     And I click Logout at the bottom in the navbar
     Then I am on the login page
 
+  @positive
+  Scenario: Verifikasi session Log out akun
+    Given I am on the login page
+    When I enter email "team3sqa@gmail.com" and password "SQA@Hadir12345"
+    And I click the login button
+    And I should be redirected to the dashboard page
+    And I click the navbar at the top right of the page
+    And I click Logout at the bottom in the navbar
+    And I am on the login page
+    And I press back button
+    Then Verify user remains on the login page
+

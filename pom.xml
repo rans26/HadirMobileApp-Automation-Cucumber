@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.tugasSeleniumCucumber</groupId>
-  <artifactId>Pengujian-SauceDemo-dengan-Selenium-dan-Cucumber</artifactId>
+  <artifactId>Pengujian-HadirApps-dengan-Selenium-dan-Cucumber</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 

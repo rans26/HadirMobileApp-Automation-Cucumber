@@ -1,4 +1,4 @@
-package com.TugasAkhirKelompok3.steps.AbsenMasukSteps;
+package com.TugasAkhirKelompok3.steps;
 
 import com.TugasAkhirKelompok3.drivers.DriverSingleton;
 import com.TugasAkhirKelompok3.pages.Menu.DashboardPage;
@@ -70,5 +70,12 @@ public class AbsenMasuk {
         Thread.sleep(3000);
         Assert.assertTrue(dashboardPage.isAbsenKeluarButtonDisplayed());
     }
+
+    @And("I should see the current time displayed")
+    public void i_should_see_the_current_time_displayed() {
+        Assert.assertTrue(dashboardPage.isTimeDisplayed());
+    }
+
+
 
 }

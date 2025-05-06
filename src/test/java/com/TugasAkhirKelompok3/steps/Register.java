@@ -1,4 +1,4 @@
-package com.TugasAkhirKelompok3.steps.RegisterSteps;
+package com.TugasAkhirKelompok3.steps;
 
 import com.TugasAkhirKelompok3.drivers.DriverSingleton;
 import com.TugasAkhirKelompok3.pages.Menu.DashboardPage;

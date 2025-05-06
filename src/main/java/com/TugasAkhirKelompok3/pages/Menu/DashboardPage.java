@@ -16,16 +16,18 @@ public class DashboardPage {
 
     private By absenTypeDropdown = By.xpath("//div[@id='mui-component-select-is_wfh']");
     private By noteField = By.xpath("//input[@name='notes']");
-    private By noteFieldKeluar = By.xpath("//div[@class='MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-multiline MuiInputBase-adornedStart css-1qmwbyg']");
+    private By noteFieldKeluar = By.xpath("//textarea[@name='notes']");
     private By absenButton = By.xpath("//button[normalize-space()='Absen Masuk']");
     private By cameraButton = By.xpath("//button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1xarbr2']");
-    private By toastMessage = By.xpath("//div[contains(@class,'Toastify__toast-body')]");
+    private By toastMessage = By.xpath("//div[text()='Anda sudah melakukan absen keluar']");
     private By absenKeluarButton = By.xpath("//p[@class='MuiTypography-root MuiTypography-body1 css-1plcj5e']");
     private By absenMasukButton = By.xpath("//button[@type='submit']");
+    private By absenPulangButton = By.xpath("//button[@type='submit']");
     private By navbarButton = By.xpath("//img[@alt='menu']");
     private By logoutButton = By.xpath("//button[normalize-space()='Logout']");
     private By wfoButton = By.xpath("//*[@id=\"mui-6\"]/li[1]");
     private By wfhButton = By.xpath("//*[@id=\"mui-6\"]/li[2]");
+    private By timeField = By.xpath("//input[@class='MuiInputBase-input MuiInput-input css-mnn31']");
 
     public DashboardPage(WebDriver driver) {
         this.driver = driver;
@@ -53,11 +55,11 @@ public class DashboardPage {
         driver.findElement(noteField).sendKeys(note);
     }
 
-    public void inputNoteAbsenKeluar(String note) throws InterruptedException {
+    public void inputNoteAbsenKeluar(String note) {
         driver.findElement(noteFieldKeluar).click();
-        Thread.sleep(2000);
         driver.findElement(noteFieldKeluar).sendKeys(note);
     }
+
 
     public void clickAbsenMasuk() {
         driver.findElement(absenButton).click();
@@ -82,6 +84,10 @@ public class DashboardPage {
         driver.findElement(absenKeluarButton).click();
     }
 
+    public void clickAbsenPulang() {
+        driver.findElement(absenPulangButton).click();
+    }
+
     public void clickAbsenMasukPopUp() {
         driver.findElement(absenMasukButton).click();
     }
@@ -90,13 +96,17 @@ public class DashboardPage {
         return driver.findElement(absenKeluarButton).isDisplayed();
     }
 
+    public boolean isTimeDisplayed(){
+        return driver.findElement(timeField).isDisplayed();
+    }
+
+
     public void scrollPage() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement element = driver.findElement(absenKeluarButton);
         js.executeScript("arguments[0].scrollIntoView(true);", element);
 
     }
-
 
     public void clickNavbar() {
         driver.findElement(navbarButton).click();

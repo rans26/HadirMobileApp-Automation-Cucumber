@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Suite TestNG x Selenium">
+<suite name="Hadir Apps Testing Kelompok3">
 
-    <test name="Test HADIR">
+    <test name="HADIR APPS">
         <classes>
             <class name="com.TugasAkhirKelompok3.runners.RunnerTest"></class>
         </classes>

@@ -1,4 +1,4 @@
-package com.TugasAkhirKelompok3.steps.LoginSteps;
+package com.TugasAkhirKelompok3.steps;
 
 import com.TugasAkhirKelompok3.drivers.DriverSingleton;
 import com.TugasAkhirKelompok3.pages.Menu.DashboardPage;
@@ -70,5 +70,17 @@ public class Login {
     public void iClickLogoutAtTheBottomInTheNavbar() throws InterruptedException {
         dashboardPage.clickLogout();
         Thread.sleep(1000);
+    }
+
+
+    @And("I press back button")
+    public void iPressBackButton() {
+        driver.navigate().back();
+    }
+
+    @Then("Verify user remains on the login page")
+    public void verifyUserRemainsOnTheLoginPageNoAccessToDashboard() {
+        loginPages.openPage();
+        Assert.assertTrue(loginPages.isLoginPagesDisplayed());
     }
 }

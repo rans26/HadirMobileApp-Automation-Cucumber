@@ -1,4 +1,4 @@
-package com.TugasAkhirKelompok3.steps.AbsenKeluarSteps;
+package com.TugasAkhirKelompok3.steps;
 
 import com.TugasAkhirKelompok3.pages.Menu.DashboardPage;
 import com.TugasAkhirKelompok3.pages.authentications.LoginPage;
@@ -28,22 +28,20 @@ public class AbsenKeluar {
     @And("I click the absen keluar button")
     public void i_click_the_absen_keluar_button() throws InterruptedException {
             dashboardPage.clickAbsenKeluar();
-            Thread.sleep(2000);
+            Thread.sleep(1000);
     }
 
     @And("I input {string} absen keluar")
     public void i_input_note(String note) throws InterruptedException {
         dashboardPage.inputNoteAbsenKeluar(note);
+        Thread.sleep(2000);
     }
 
-//    @When("I click the {string} button")
-//    public void i_click_the_button(String buttonText) {
-//        if (buttonText.equalsIgnoreCase("Absen Keluar")) {
-//            dashboardPage.clickAbsenKeluar();
-//        } else {
-//            dashboardPage.clickAbsenMasuk();
-//        }
-//    }
+    @And("I click the absen pulang button")
+    public void i_click_the_absen_pulang_button() throws InterruptedException {
+        dashboardPage.clickAbsenPulang();
+        Thread.sleep(1000);
+    }
 
     @Then("I should see a confirmation message {string}")
     public void i_should_see_confirmation_message(String expected) {

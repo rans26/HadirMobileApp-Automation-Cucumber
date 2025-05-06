@@ -4,6 +4,7 @@ Feature: Absen functionality
   Scenario Outline: Absen Masuk dengan kombinasi tipe absen dan catatan
     Given I am logged in as user with email "<email>" and password "<password>"
     And I am on the absen masuk page
+    And I should see the current time displayed
     And I select absen type "<absenType>"
     And I input note "<note>"
     And I click the absen masuk button
@@ -13,6 +14,6 @@ Feature: Absen functionality
     Examples:
       | email                  | password         | absenType        | note               |
       | team3sqa6@gmail.com   | SQA@Hadir12345   | Work From Office | Masuk on-time      |
-#      | team3sqa2@gmail.com    | SQA@Hadir12345   | Work From Home   | WFH karena hujan   |
-#      | team3sqa3@gmail.com    | SQA@Hadir12345   | Work From Office |                    |
-#      | team3sqa5@gmail.com    | SQA@Hadir12345   | Work From Home |                    |
+      | team3sqa2@gmail.com    | SQA@Hadir12345   | Work From Home   | WFH karena hujan   |
+      | team3sqa3@gmail.com    | SQA@Hadir12345   | Work From Office |                    |
+      | team3sqa5@gmail.com    | SQA@Hadir12345   | Work From Home |                    |
