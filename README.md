@@ -1,4 +1,4 @@
-# Tugas Akhir Juara Coding SQA Automation batch 21
+# Tugas Akhir Juara Coding SQA Automation Batch 21
 Ini adalah Tugas Akhir Juara Coding SQA Automation batch 21 dari Kelompok 3
 
 # Web yang diuji
