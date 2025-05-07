@@ -74,7 +74,7 @@ public class Register {
     }
 
     @Then("I should be see message {string}")
-    public void i_should_be_see_message(String expectedMessage) {
+    public void i_should_be_see_message(String expectedMessage) throws InterruptedException {
         String actualMessage = registerPage.getNotifMessage();
         Assert.assertEquals(expectedMessage, actualMessage);
     }

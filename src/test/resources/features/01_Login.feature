@@ -3,7 +3,7 @@ Feature: Login functionality
   @positive
   Scenario: Successful login with valid credentials
     Given I am on the login page
-    When I enter email "team3sqa@gmail.com" and password "SQA@Hadir12345"
+    When I enter email "team3sqa2@gmail.com" and password "SQA@Hadir12345"
     And I click the login button
     Then I should be redirected to the dashboard page
 
@@ -24,14 +24,14 @@ Feature: Login functionality
   @negative
   Scenario: Login with wrong password
     Given I am on the login page
-    When I enter email "team3sqa@gmail.com" and password "SQA@Hadir"
+    When I enter email "team3sqa2@gmail.com" and password "SQA@Hadir"
     And I click the login button
     Then I should see an error message "Email atau password salah"
 
   @negative
   Scenario: Login with blank password
     Given I am on the login page
-    When I enter email "team3sqa@gmail.com" and password ""
+    When I enter email "team3sqa2@gmail.com" and password ""
     And I click the login button
     Then I should see an error message "Email atau password salah"
 
@@ -52,7 +52,7 @@ Feature: Login functionality
   @positive
   Scenario: Verifikasi Log out akun
     Given I am on the login page
-    When I enter email "team3sqa@gmail.com" and password "SQA@Hadir12345"
+    When I enter email "team3sqa2@gmail.com" and password "SQA@Hadir12345"
     And I click the login button
     And I should be redirected to the dashboard page
     And I click the navbar at the top right of the page
@@ -62,7 +62,7 @@ Feature: Login functionality
   @positive
   Scenario: Verifikasi session Log out akun
     Given I am on the login page
-    When I enter email "team3sqa@gmail.com" and password "SQA@Hadir12345"
+    When I enter email "team3sqa2@gmail.com" and password "SQA@Hadir12345"
     And I click the login button
     And I should be redirected to the dashboard page
     And I click the navbar at the top right of the page

@@ -6,9 +6,13 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
         features = {
                 "src/test/resources/features/01_Login.feature",
-//                "src/test/resources/features/02_Register.feature",
-//                "src/test/resources/features/04_AbsenMasuk.feature",
-//                "src/test/resources/features/03_AbsenKeluar.feature",
+                "src/test/resources/features/02_Register.feature",
+                "src/test/resources/features/03_AbsenMasuk.feature",
+                "src/test/resources/features/04_AbsenKeluar.feature",
+                "src/test/resources/features/05_Absensi.feature",
+                "src/test/resources/features/06_KoreksiAbsensi.feature",
+                "src/test/resources/features/09_Cuti.feature",
+                "src/test/resources/features/10_Sakit.feature",
         },
         glue = {
                 "com.TugasAkhirKelompok3.hooks",

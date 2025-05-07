@@ -76,7 +76,8 @@ public class RegisterPage {
         return driver.findElement(buttonRegister).isDisplayed();
     }
 
-    public String getNotifMessage() {
+    public String getNotifMessage() throws InterruptedException {
+        Thread.sleep(6000);
         return driver.findElement(successMessage).getText();
     }
 

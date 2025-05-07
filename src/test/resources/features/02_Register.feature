@@ -13,12 +13,12 @@ Feature: Register functionality
       | Field   | Value                     |
       | nik     | D7232029                  |
       | name    | Randi Maulana             |
-      | email   | randi.test@gmail.com    |
+      | email   | randi.test1234@gmail.com    |
       | password| password123               |
       | photo   | src/test/resources/SelfieTest.png |
     And I click hide and show password
     And I click the register button
-    Then I should be see message "Akun sudah terdaftar di sistem dan belum terverifikasi"
+    Then I should be see message "berhasil register, silahkan menunggu di approve oleh admin"
 
   @negative
   Scenario: Registration with an already registered email

@@ -28,6 +28,7 @@ public class DashboardPage {
     private By wfoButton = By.xpath("//*[@id=\"mui-6\"]/li[1]");
     private By wfhButton = By.xpath("//*[@id=\"mui-6\"]/li[2]");
     private By timeField = By.xpath("//input[@class='MuiInputBase-input MuiInput-input css-mnn31']");
+    private By timeKeluarField = By.xpath("//input[contains(@class, 'MuiInputBase-input') and contains(@class, 'Mui-disabled')]\n");
 
     public DashboardPage(WebDriver driver) {
         this.driver = driver;
@@ -60,7 +61,6 @@ public class DashboardPage {
         driver.findElement(noteFieldKeluar).sendKeys(note);
     }
 
-
     public void clickAbsenMasuk() {
         driver.findElement(absenButton).click();
     }
@@ -75,7 +75,7 @@ public class DashboardPage {
     }
 
     public void clickCamera() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.elementToBeClickable(cameraButton));
         driver.findElement(cameraButton).click();
     }
@@ -98,6 +98,10 @@ public class DashboardPage {
 
     public boolean isTimeDisplayed(){
         return driver.findElement(timeField).isDisplayed();
+    }
+
+    public boolean isTimeKeluarDisplayed(){
+        return driver.findElement(timeKeluarField).isDisplayed();
     }
 
 

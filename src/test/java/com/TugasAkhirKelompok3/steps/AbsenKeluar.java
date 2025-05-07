@@ -54,4 +54,9 @@ public class AbsenKeluar {
         String actual = dashboardPage.getToastMessage();
         Assert.assertTrue(actual.contains(expected));
     }
+
+    @And("I should see the current time keluar displayed")
+    public void i_should_see_the_current_time_keluar_displayed() {
+        Assert.assertTrue(dashboardPage.isTimeKeluarDisplayed());
+    }
 }
