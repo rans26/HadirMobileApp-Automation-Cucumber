@@ -1,5 +1,6 @@
 package com.TugasAkhirKelompok3.steps;
 
+import com.TugasAkhirKelompok3.pages.Menu.CutiPage;
 import com.juaracoding.Pages.CutiPage;
 import com.juaracoding.Utils.DriverManager;
 import io.cucumber.java.en.Given;
